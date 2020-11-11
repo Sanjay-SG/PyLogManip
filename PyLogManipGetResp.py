@@ -25,7 +25,8 @@ respfilename = "RESPFILE"+dt_string
 
 #Create and configure logger 
 # logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/matchesfoundinselectedfiles.log", 
-logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/"+resplogfilename+".log", 
+# logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/"+resplogfilename+".log", 
+logging.basicConfig(filename=resplogfilename+".log", 
                     format='%(asctime)s %(message)s', 
                     filemode='w') 
   

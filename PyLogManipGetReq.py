@@ -21,13 +21,15 @@ now = datetime.datetime.now()
 dt_string = now.strftime("%d%m%Y%H%M%S")
 
 # print("date and time =", dt_string)	
-regexlogfilename = "REGEXLOG"+dt_string
+reqlogfilename = "REQLOGFILE"+dt_string #filename changed
 
-regexfilename = "REGEXMATCHES"+dt_string
+reqfilename = "REQFILE"+dt_string #filename changed
+
 
 #Create and configure logger 
 # logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/regex.log", 
-logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/"+regexlogfilename+".log", 
+# logging.basicConfig(filename="C:/Users/GunagiSa/OneDrive - Unisys/Documents/ssg/cmd/RALogSearch/"+reqlogfilename+".log", 
+logging.basicConfig(filename=reqlogfilename+".log", 
                     format='%(asctime)s %(message)s', 
                     filemode='w') 
   
@@ -62,7 +64,7 @@ print(p1)
 
 # regexfilename = "REGEXMATCHES"+datetime.now()
 
-fileLines = open(regexfilename,"w")
+fileLines = open(reqfilename,"w")
 
 
 for root, dirs, files in os.walk(path, topdown=False):
